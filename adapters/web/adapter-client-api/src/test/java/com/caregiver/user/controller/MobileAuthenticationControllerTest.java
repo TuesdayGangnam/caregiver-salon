@@ -38,7 +38,7 @@ class MobileAuthenticationControllerTest extends BaseControllerTest {
   @NullSource
   @EmptySource
   @DisplayName(
-      "MobileAuthenticationDto.Request 는 잘못된 휴대폰 번호 필드가 주어졌을 경우 http status 400을 리턴한다"
+      "MobileAuthenticationDto.Request 는 잘못된 휴대폰 번호 필드가 주어졌을 경우 http status 422을 리턴한다"
   )
   void test_01(String input) throws Exception {
 
@@ -48,7 +48,7 @@ class MobileAuthenticationControllerTest extends BaseControllerTest {
 
     final ResultActions resultActions = getResultActions(requestBody);
 
-    resultActions.andExpect(status().isBadRequest());
+    resultActions.andExpect(status().isUnprocessableEntity());
   }
 
   private static Stream<Arguments> provideInvalidMobileNumbers() {

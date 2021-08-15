@@ -28,7 +28,7 @@ class GroupControllerTest extends BaseControllerTest {
   @ParameterizedTest
   @MethodSource("provideInvalidCapacity")
   @DisplayName(
-      "GroupDto.CreateRequest createRequest 는 잘못 수용 인원이 주어졌을 경우 http status 400을 리턴한다"
+      "GroupDto.CreateRequest createRequest 는 잘못 수용 인원이 주어졌을 경우 http status 422을 리턴한다"
   )
   public void test_01(String groupName, int capacity, String description) throws Exception {
 
@@ -39,7 +39,7 @@ class GroupControllerTest extends BaseControllerTest {
 
     final ResultActions resultActions = getResultActions(requestBody);
 
-    resultActions.andExpect(status().isBadRequest());
+    resultActions.andExpect(status().isUnprocessableEntity());
   }
 
   private static Stream<Arguments> provideInvalidCapacity() {
