@@ -24,7 +24,7 @@ public interface SendAccreditationNumberUsecase {
   class SendAccreditationNumberCommand extends SelfValidating<SendAccreditationNumberCommand> {
 
     @NotBlank
-    @Pattern(regexp = "(01[0-9])-(\\d{3,4})-(\\d{4})")
+    @Pattern(regexp = "(01[0-9])(\\d{3,4})(\\d{4})")
     private final String mobile;
 
     public SendAccreditationNumberCommand(String mobile) {

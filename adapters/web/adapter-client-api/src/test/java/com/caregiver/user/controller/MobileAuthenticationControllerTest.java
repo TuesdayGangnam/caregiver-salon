@@ -69,7 +69,7 @@ class MobileAuthenticationControllerTest extends BaseControllerTest {
   )
   void test_02() throws Exception {
 
-    final String mobileNumber = "010-1234-1234";
+    final String mobileNumber = "01012341234";
     final MobileAuthenticationDto.Request request =
         new MobileAuthenticationDto.Request(mobileNumber);
 

@@ -24,7 +24,7 @@ public interface NotificationSmsPort {
     private final String message;
 
     @NotBlank
-    @Pattern(regexp = "(01[0-9])-(\\d{3,4})-(\\d{4})")
+    @Pattern(regexp = "(01[0-9])(\\d{3,4})(\\d{4})")
     private final String mobile;
 
     @NotBlank
