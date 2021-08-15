@@ -1,0 +1,7 @@
+# 인증번호 API를 호출합니다.
+POST {{host}}/v1/mobile/accreditation-number/accept-sms
+Content-type: application/json
+
+{
+  "mobile" : "01012345678"
+}
