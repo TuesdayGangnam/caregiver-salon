@@ -6,12 +6,12 @@ cloud:
   aws:
     s3:
       image-path: image/
-      bucket: caregiver-salon
+      bucket: caregiver-salon-static
     region:
       static: ap-northeast-2
     credentials:
-      access-key: ${caregiver.aws.secret-key}
-      secret-key: ${caregiver.aws.access-key}
+      access-key: ${cloud.aws.credentials.access-key}
+      secret-key: ${cloud.aws.credentials.secret-key}
     stack:
       auto: false
 
