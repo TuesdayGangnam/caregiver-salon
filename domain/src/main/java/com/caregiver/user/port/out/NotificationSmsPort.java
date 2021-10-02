@@ -41,7 +41,7 @@ public interface NotificationSmsPort {
      * 국가번호와 휴대폰번호를 연결하여 리턴합니다.
      */
     public String concatCountryCodeMobile() {
-      return countryCode + mobile;
+      return this.countryCode + this.mobile;
     }
 
   }
