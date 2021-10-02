@@ -1,14 +1,14 @@
 package com.caregiver.common;
 
 
+import java.util.Set;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import javax.validation.Validation;
 import javax.validation.Validator;
-import java.util.Set;
 
 /**
- * Java Bean 유효성 검사를 하기 위한 클래스
+ * Java Bean 유효성 검사를 하기 위한 클래스.
  *
  * @param <T> 유효성 검사 대상 객체
  */
@@ -16,6 +16,9 @@ public abstract class SelfValidating<T extends SelfValidating<T>> {
 
   private final Validator validator;
 
+  /**
+   * SelfValidating 생성자.
+   */
   public SelfValidating() {
     validator = Validation
         .buildDefaultValidatorFactory()
