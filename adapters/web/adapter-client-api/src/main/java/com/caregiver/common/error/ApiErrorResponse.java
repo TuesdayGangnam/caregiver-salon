@@ -94,7 +94,7 @@ public class ApiErrorResponse extends ApiResponseModel<Object> {
     }
 
     /**
-     * field, reason을 이용하여 생성한 사이즈가 1인 List<FieldError>를 리턴합니다.
+     * field, reason을 이용하여 생성한 사이즈가 1인 {@code List<FieldError>}를 리턴합니다.
      *
      * @param field  에러가 난 필드명
      * @param reason 사유
@@ -104,7 +104,7 @@ public class ApiErrorResponse extends ApiResponseModel<Object> {
     }
 
     /**
-     * bindingResult에서 field와 message를 추출하여 생성한 List<FieldError>를 리턴합니다.
+     * bindingResult에서 field와 message를 추출하여 생성한 {@code List<FieldError>}를 리턴합니다.
      *
      * @param bindingResult 실패한 유효성 검증 결과
      */
@@ -123,8 +123,8 @@ public class ApiErrorResponse extends ApiResponseModel<Object> {
     }
 
     /**
-     * constraintViolationException에서 propertyPath와 message를 추출하여 생성한 List<FieldError>를
-     * 리턴합니다.
+     * constraintViolationException에서 propertyPath와 message를 추출하여 생성한
+     * {@code List<FieldError>}를 리턴합니다.
      *
      * @param constraintViolationException 유효성 검증 실패
      */

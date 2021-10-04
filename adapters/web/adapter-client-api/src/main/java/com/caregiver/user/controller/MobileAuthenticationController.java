@@ -1,5 +1,6 @@
 package com.caregiver.user.controller;
 
+import com.caregiver.user.common.ApiResponseModel;
 import com.caregiver.user.dto.MobileAuthenticationDto;
 import com.caregiver.user.port.in.SendAccreditationNumberUsecase;
 import javax.validation.Valid;
@@ -27,14 +28,13 @@ public class MobileAuthenticationController {
    * @param request 인증번호를 요청하기위한 요청
    */
   @PostMapping("/accreditation-number/accept-sms")
-  public ResponseEntity<?> acceptAccreditationNumber(
+  public ResponseEntity<ApiResponseModel<?>> acceptAccreditationNumber(
       @RequestBody @Valid MobileAuthenticationDto.Request request) {
 
     sendAccreditationNumberUsecase.send(request.generateCommand());
-
     return ResponseEntity
         .status(HttpStatus.CREATED)
-        .build();
+        .body(new ApiResponseModel<>());
   }
 
 }

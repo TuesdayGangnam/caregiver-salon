@@ -3,7 +3,7 @@ package com.caregiver.common.util;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * 인증번호 유틸 클래스
+ * 인증번호 유틸 클래스.
  */
 public class AccreditationNumberUtil {
 
