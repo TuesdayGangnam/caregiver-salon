@@ -3,6 +3,7 @@ package com.caregiver.common;
 import com.caregiver.config.AwsProperties;
 import com.caregiver.config.AwsSnsClient;
 import com.caregiver.config.AwsSnsDefaultCredential;
+import com.caregiver.port.in.SendSmsMessageAdapter;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.ConfigFileApplicationContextInitializer;
 import org.springframework.test.context.ContextConfiguration;
@@ -13,7 +14,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  */
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {AwsProperties.class, AwsSnsDefaultCredential.class,
-    AwsSnsClient.class},
+    AwsSnsClient.class, SendSmsMessageAdapter.class},
     initializers = ConfigFileApplicationContextInitializer.class)
 public class BaseConfiguration {
 
