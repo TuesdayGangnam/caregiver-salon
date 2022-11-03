@@ -1,0 +1,6 @@
+
+cloud:
+  aws:
+    s3:
+      access-key: ${cloud.aws.credentials.access-key}
+      secret-key: ${cloud.aws.credentials.secret-key}
